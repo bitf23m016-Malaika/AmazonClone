@@ -1,7 +1,7 @@
 *{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
-    border:border-box;
+    box-sizing: border-box;
 
 }
 .navBar{
@@ -206,4 +206,123 @@ ul a{
 }
 .copy-right{
     padding-top:12px;
+}
+/* ===== RESPONSIVE: Tablet (max 768px) ===== */
+@media (max-width: 768px) {
+
+  /* Navbar: stack into column, hide address */
+  .navBar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px 10px;
+    gap: 8px;
+    justify-content: space-between;
+  }
+
+  .nav-address {
+    display: none;
+  }
+
+  /* Search bar: full width */
+  .nav-search {
+    width: 100%;
+    order: 3; /* moves search below logo row */
+    flex: 0 0 100%;
+  }
+
+  /* Panel: allow text to scroll horizontally */
+  .pannel {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 10px;
+    gap: 15px;
+    white-space: nowrap;
+  }
+
+  .pannel-ops {
+    width: auto;
+    flex-wrap: nowrap;
+  }
+
+  /* Shop boxes: 2 per row on tablet */
+  .box {
+    width: 45%;
+  }
+
+  /* Footer columns: 2 per row */
+  .foot-pannel2 {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .foot-pannel2 ul {
+    width: 45%;
+  }
+}
+@media (max-width: 480px) {
+
+  /* Navbar */
+  .navBar {
+    padding: 6px 8px;
+  }
+
+  .nav-logo {
+    width: 80px;
+  }
+
+  /* Search bar */
+  .nav-search {
+    height: 36px;
+  }
+
+  .search-input {
+    font-size: 0.85rem;
+  }
+
+  /* Hide sign-in text label, keep icon feel */
+  .nav-return {
+    display: none;
+  }
+
+  /* Shop boxes: 1 per row on mobile */
+  .box {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .box-img {
+    height: 200px;
+  }
+
+  /* Hero shorter on mobile */
+  .hero-section {
+    height: 200px;
+  }
+
+  /* Footer columns: stack full width */
+  .foot-pannel2 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .foot-pannel2 ul {
+    width: 90%;
+  }
+
+  /* Footer bottom links: wrap */
+  .pages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .foot-pannel3 {
+    height: auto;
+    padding-bottom: 12px;
+  }
 }
